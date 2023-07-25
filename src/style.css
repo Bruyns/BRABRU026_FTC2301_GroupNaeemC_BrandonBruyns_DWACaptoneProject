@@ -1,0 +1,45 @@
+body {
+    border: 0px;
+    max-width: 375px;
+    max-height: 667px;
+    background-color: #ffe5fd;
+}
+
+/* ----------------  Header content  ---------------- */
+
+.Header {
+    display: flex;
+    flex-direction: column;
+    width: 375px;
+    height: 667px;
+    background-color: #c82956;
+}
+ /* -----  Header Text/Font----- */
+.Header--Text {
+    color: white;
+    text-align: left;
+    margin-right: 50px;
+}
+
+/* ----- Header Nav/drop down menu ----- */
+nav {
+    display: flex;
+}
+
+.Navbar--list {
+    list-style: none;
+
+}
+
+.Signup-Button {
+    width: 70px;
+    height: 35px;
+    margin: 10px 0px 0px 150px
+}
+
+.Header--RandomPodcast {
+    border-color: #393939;
+    border-radius: 15px;
+    width: 150px;
+    margin-left: 100px;
+}
