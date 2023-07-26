@@ -43,3 +43,9 @@ nav {
     width: 150px;
     margin-left: 100px;
 }
+
+/* ----------------  Podcast preview --------------- */
+.podcast--image {
+    width: 100px;
+    height: 100px;
+}
