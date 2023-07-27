@@ -1,6 +1,7 @@
 body {
     border: 0px;
-    width: fit-content;
+    width: 375px;
+    height: 667px;
     background-color: #ffe5fd;
 }
 
@@ -25,30 +26,51 @@ body {
     color: black;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    gap: 48px;
-    padding: 0px 16px;
+    align-items: stretch;
+    gap: 24px;
+    padding: 0px;
 }
 
 .nav--title {
-    font-size: 24px;
-    font-style: oblique;
+    font-size: 20px;
+    font-family: Raleway;
 }
 
 .nav ul {
-    padding: 8px 4px 8px 0px;
-    margin: 3px;
+    padding: 0px 0px 0px 0px;
+    margin: 0px;
     list-style: none;
     display: flex;
-    gap: 5.5px ;
+    gap: 4px ;
     align-items:center;
 }
 
 .nav a {
     color: inherit;
     text-decoration: none;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 4px;
+}
+
+.nav li:active {
+    background-color: #f87aee;
 }
 
 .nav li:hover {
-    background-color: #fca6a6;
+    background-color: #ffcefb;
+
+}
+
+/* ------------------ Podcast styling ----------------- */
+.podcast {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.podcast--image {
+    width: 60px;
+    height: 60px;
 }

@@ -14,7 +14,7 @@ export default function Podcast() {
     // }, [])
 
     return (
-        <main>
+        <main className="podcast">
             {podcast.map((podcast) => (
                 <div key={podcast.id}>
                 <button

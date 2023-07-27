@@ -3,7 +3,7 @@ import React from "react";
 export default function Navbar() {
     return (
         <nav className="nav">
-            <a href="/" className="nav--title">Site name</a>
+            <a href="/" className="nav--title">Pod Casting</a>
             <img src="" />
             <ul>
                 <li>
