@@ -1,7 +1,6 @@
 body {
     border: 0px;
-    width: 375px;
-    height: 667px;
+    width: fit-content;
     background-color: #ffe5fd;
 }
 
@@ -10,7 +9,6 @@ body {
 .Header {
     display: flex;
     flex-direction: column;
-    width: 375px;
     height: 567px;
     background-color: #c82956;
 }
@@ -42,10 +40,15 @@ body {
     margin: 3px;
     list-style: none;
     display: flex;
-    gap: 4px ;
+    gap: 5.5px ;
+    align-items:center;
 }
 
 .nav a {
     color: inherit;
     text-decoration: none;
+}
+
+.nav li:hover {
+    background-color: #fca6a6;
 }
