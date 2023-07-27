@@ -1,7 +1,7 @@
 body {
     border: 0px;
-    max-width: 375px;
-    max-height: 667px;
+    width: 375px;
+    height: 667px;
     background-color: #ffe5fd;
 }
 
@@ -18,34 +18,34 @@ body {
 .Header--Text {
     color: white;
     text-align: left;
-    margin-right: 50px;
+    margin-right: 46px;
 }
 
 /* ----- Header Nav/drop down menu ----- */
-nav {
+.nav {
+    background-color: #a5a5a5;
+    color: black;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 48px;
+    padding: 0px 16px;
 }
 
-.Navbar--list {
+.nav--title {
+    font-size: 24px;
+    font-style: oblique;
+}
+
+.nav ul {
+    padding: 8px 4px 8px 0px;
+    margin: 3px;
     list-style: none;
-
+    display: flex;
+    gap: 4px ;
 }
 
-.Signup-Button {
-    width: 70px;
-    height: 35px;
-    margin: 10px 0px 0px 150px
-}
-
-.Header--RandomPodcast {
-    border-color: #393939;
-    border-radius: 15px;
-    width: 150px;
-    margin-left: 100px;
-}
-
-/* ----------------  Podcast preview --------------- */
-.podcast--image {
-    width: 100px;
-    height: 100px;
+.nav a {
+    color: inherit;
+    text-decoration: none;
 }

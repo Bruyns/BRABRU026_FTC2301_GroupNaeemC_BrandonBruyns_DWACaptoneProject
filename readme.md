@@ -6,5 +6,7 @@
 
 
 ## contributions
-* [flaticon play button](<a href="https://www.flaticon.com/free-icons/play" title="play icons">Play icons created by Freepik - Flaticon</a>)
-* 
+* <a href="https://www.flaticon.com/free-icons/play" title="play icons">Play icons created by Freepik - Flaticon</a>
+* api's used
+    - [preview podcasts](https://podcast-api.netlify.app/shows)
+    - [displayed podcasts](https://podcast-api.netlify.app/id/<ID>)
