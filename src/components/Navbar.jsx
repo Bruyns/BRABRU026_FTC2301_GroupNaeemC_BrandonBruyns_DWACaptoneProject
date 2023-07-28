@@ -1,26 +1,28 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 
 export default function Navbar() {
     return (
         <nav className="nav">
-            <a href="/" className="nav--title">Pod Casting</a>
-            <img src="" />
+            <Link to="/" className="nav--title">Pod Casting</Link>
+            {/* <img src="" /> */}
             <ul>
                 <li>
-                    <a href="latest">Latest</a>
+                    <Link to="/Latest">Latest</Link>
                 </li>
                 <li>
-                    <a href="/podcast">Podcasts</a>
+                    <Link to="/podcast">Podcasts</Link>
                 </li>
                 <li>
-                <a href="/contact">Contact us</a>
+                <Link to="/Contact_us">Contact us</Link>
                 </li>
                 <li>
                     <button className="nav--signup">
-                        <a href="/signin">Sign up here</a>
+                        <Link to="/Signup">Sign up here</Link>
                     </button>
                 </li>
             </ul>
         </nav>
-    )
+    );
 }
