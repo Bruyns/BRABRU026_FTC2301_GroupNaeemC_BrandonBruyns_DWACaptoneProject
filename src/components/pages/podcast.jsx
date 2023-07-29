@@ -102,7 +102,7 @@ export default function Podcast() {
                 </div>
             ) :
             (podcast.map((podcastItem) => (
-                <div key={podcastItem.Id} className="podcast--item">
+                <div key={podcastItem.id} className="podcast--item">
                     <img 
                         className="podcast--image" 
                         src={podcastItem.image} 

@@ -1,7 +1,6 @@
 body {
     border: 0px;
-    width: 375px;
-    height: 667px;
+
     background-color: #ffe5fd;
 }
 
@@ -168,4 +167,26 @@ body {
 }
 .podcast--item:hover .play--icon {
     display: block;
+}
+
+/* ------------------ media queries for Tablet ------------------- */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .navbar {
+        width: 100%;
+    }
+    
+    .podcast--item {
+        width: 25%;
+    }
+}
+
+/* ------------------ media queries for laptop ------------------- */
+@media (min-width: 1024px) {
+    .navbar {
+        width: 100%;
+    }
+    
+    .podcast--item {
+        width: 25%;
+    }
 }
