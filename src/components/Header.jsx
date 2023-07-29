@@ -1,5 +1,9 @@
 import React from "react";
 
+/* the main home page that the user sees upon loading the webapp. it is always rendered first
+* along with the navbar or whenever the user clicks the logo/home button
+*
+*/
 export default function Header() {
     return (
         <main className="Header">

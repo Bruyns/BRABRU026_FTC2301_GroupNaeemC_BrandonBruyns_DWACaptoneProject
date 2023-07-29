@@ -64,23 +64,21 @@ body {
 }
 
 /* ------------------ Podcast styling ----------------- */
-.podcast {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-}
-
-.podcast--image {
-    width: 60px;
-    height: 60px;
-}
-
+/* --------- Loading screen ----------- */
 .loading--screen {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 60vh;
+}
+
+.loading--text {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    font-family: Raleway;
 }
 
 .loading--image {
@@ -98,10 +96,76 @@ body {
     }
 }
 
-.loading--text {
-    margin-top: 20px;
+/* ------------- podcast Cards templates ------------- */
+.podcast {
+    background-color: #c82956;
+}
+
+.podcast--item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin: 2px;
+    background-color: #f7e1e1;
+    border: 1px solid #ddd;
+    padding: 5px;
+    position: relative;
+}
+
+.podcast--image {
+    width: 200px;
+    height: 150px;
+}
+
+.podcast--info {
+    flex: 1;
+    margin-left: 10px;
+    position: relative;
+}
+
+.podcast--title {
     font-size: 20px;
     font-weight: bold;
-    color: black;
-    font-family: Raleway;
+    font-family: Raleway ;
+}
+
+.podcast--updated,
+.podcast--seasons {
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.display--info-button {
+    margin-top: 10px;
+    cursor: pointer;
+}
+ .podcast--description {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #a5a5a5;
+    padding: 10px;
+    z-index: 1;
+ }
+
+.podcast--description.show {
+    display: block;
+}
+
+.play--icon {
+    width: 50px;
+    height: 50px;
+    background-image: url(./img/play-button-arrowhead.png);
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    display: none;
+    z-index: 1;
+}
+.podcast--item:hover .play--icon {
+    display: block;
 }

@@ -3,6 +3,12 @@ import { Link } from "react-router-dom";
 
 
 export default function Navbar() {
+
+
+    /*the links used form react-router-dom allows the main App folder to identify the 
+    * correct path/page to load on the webapp pending on what the user clicks
+    *
+    */
     return (
         <nav className="nav">
             <Link to="/" className="nav--title">Pod Casting</Link>
