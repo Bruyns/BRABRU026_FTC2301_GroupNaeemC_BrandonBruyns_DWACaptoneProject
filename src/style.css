@@ -6,17 +6,48 @@ body {
 
 /* ----------------  Header content  ---------------- */
 
-.Header {
+.header {
     display: flex;
     flex-direction: column;
-    height: 567px;
+    justify-content: left;
+    height: 90vh;
     background-color: #c82956;
 }
  /* -----  Header Text/Font----- */
-.Header--Text {
+.header--Text {
     color: white;
     text-align: left;
     margin-right: 46px;
+}
+
+.header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.header h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.header h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.carousel {
+    width: 80%;
+    overflow: hidden;
+}
+
+.slick-slide img {
+    width: 100%;
+    height: auto;
+    max-width: 30vh;
+}
+
+.slick-fade .slick-slide {
+    transition: opacity 0.5s ease-in-out;
 }
 
 /* ----- Header Nav/drop down menu ----- */

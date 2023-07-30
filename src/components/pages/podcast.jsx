@@ -1,31 +1,43 @@
 import React from "react";
 import PodcastSorting from "../PodcastSorting";
+import PodcastCarousel from "../Carousel";
+import Header from "../header";
 
-export default function Podcast() {
-    /* states that is used in the webapp
+export default function Podcast({ id }) {
+    /* states variables that is used in the webapp
     *
     */
     const [podcast, setPodcast] = React.useState([]);
     const [showDescriptionId, setShowDescriptionId] = React.useState(null);
     const [selectedOption, setSelectedOption] = React.useState(null);
+    const [showsData, setShowsData] = React.useState([])
     
     /* Api callback function that fetchs the data from the podcast api as well 
     * as if any data couldnt be fetched returns an error to the console with a message
     *
     */
     React.useEffect(() => {
-        fetch("https://podcast-api.netlify.app/shows")
+        const apiUrl = id
+            ? `https://podcast-api.netlify.app/shows/${id}`
+            : "https://podcast-api.netlify.app/shows" ;
+        fetch(apiUrl)
             .then((res) => {
                 if (!res.ok){
                     throw new Error("Network response was not ok");
                 }return res.json();
             })
-            .then((data) => setPodcast(data))
+            .then((data) => {
+                if(id) {
+                    setShowsData([data]);
+                }else {
+                    setPodcast(data);
+                }
+            })
             .catch((error) => {
                 console.error("Error fetching the podcast data:", error);
             });
             console.log(podcast)
-        }, []);     
+        }, [id]);     
         
         /* function in charge of what happens when the user clicks the "display info" button
         * found in the below html return. it has logic implemented to show info based on 
@@ -93,6 +105,7 @@ export default function Podcast() {
         }
 
     return (
+        <div>
         <main className="podcast">
             <PodcastSorting handleSelectChange={handleSortingChange} />
             {podcast.length === 0 ? (
@@ -126,9 +139,6 @@ export default function Podcast() {
                 </div>
             )))}
         </main>
+        </div>
             )
 }
-
-
-
-
