@@ -5,6 +5,7 @@ import Season from "./Season.jsx";
 export default function ShowDetails() {
   const { id } = useParams();
   const [showData, setShowData] = useState(null);
+  console.log(data)
 
   useEffect(() => {
     const apiUrl = `https://podcast-api.netlify.app/shows/${id}`;
@@ -26,7 +27,7 @@ export default function ShowDetails() {
   if (!showData) {
     return  <div className="loading--screen">
                 <img className="loading--image" 
-                    src="/src/img/ouroboros.png" 
+                    src="./src/img/ouroboros.png" 
                     alt="Loading snake"/>
                 <div className="loading--text">Loading...</div>
             </div>;

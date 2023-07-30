@@ -14,7 +14,7 @@ export default function PodcastCarousel ({ podcast }){
         *podcastCarousel which is displayed on the header/home page
         *
         */
-        const getRandomPodcast = () => {
+        const getRandomPodcast = (podcast) => {
             const randomPodcast = [];
             while (randomPodcast.length < 6) {
                 const randomIndex = Math.floor(Math.random() * podcast.length);
@@ -34,7 +34,7 @@ export default function PodcastCarousel ({ podcast }){
         /* a short check statement to ensure that the passed prop contains the correct data
         *
         */
-       if(!podcast || !podcast.length || !podcast[0].image) {
+       if(!podcast || podcast.length === 0 || !podcast[0]?.image) {
         return null;
        }
 
@@ -63,28 +63,44 @@ export default function PodcastCarousel ({ podcast }){
        let slider;
 
     return (
-        <div className="carousel">
+    <div className="carousel">
+        {randomPodcast.length > 0 ? (
+        <div>
             <img
-                src={leftArrowImage}
-                alt="Previous"
-                className="arrow left-arrow"
-                onClick={goToPrevSlide}
+            src={leftArrowImage}
+            alt="Previous"
+            className="arrow--left-arrow"
+            onClick={goToPrevSlide}
             />
-        <Slider ref={(c) => (slider = c)} {...settings}>
+            <Slider ref={(c) => (slider = c)} {...settings}>
             {randomPodcast.map((podcastItem) => (
                 <div key={podcastItem.id}>
-                    <img 
-                        src={podcastItem.image}
-                        alt={podcastItem.title} 
-                    />
-                    </div>))}
-        </Slider>
-        <img
-                src={rightArrowImage}
-                alt="Next"
-                className="arrow right-arrow"
-                onClick={goToNextSlide}
+                <img 
+                    src={podcastItem.image}
+                    alt={podcastItem.title} 
+                />
+                </div>
+            ))}
+            </Slider>
+            <img
+            src={rightArrowImage}
+            alt="Next"
+            className="arrow--right-arrow"
+            onClick={goToNextSlide}
             />
         </div>
-    )
+        ) : (
+        <div>
+            <div className="loading--screen">
+            <img    
+                className="loading--image" 
+                src="./src/img/ouroboros.png" 
+                alt="Loading snake"
+            />
+            <div className="loading--text">Loading...</div>
+            </div>
+        </div>
+        )}
+    </div>
+    );
 }

@@ -51,12 +51,12 @@ body {
     transition: opacity 0.5s ease-in-out;
 }
 
-.arrow left-arrow{
+.arrow--left-arrow{
     width: 30px;
     height: 30px;
 }
 
-.arrow right-arrow{
+.arrow--right-arrow{
     width: 30px;
     height: 30px;
 }
