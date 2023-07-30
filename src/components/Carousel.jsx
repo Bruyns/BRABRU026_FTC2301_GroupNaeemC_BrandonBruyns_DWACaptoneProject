@@ -3,6 +3,9 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+import leftArrowImage from "../img/left-arrow.png"
+import rightArrowImage from "../img/right-arrow.png"
+
 export default function PodcastCarousel ({ podcast }){       
         console.log(podcast)
         const [randomPodcast, setRandomPodcast] = useState([]);
@@ -31,29 +34,57 @@ export default function PodcastCarousel ({ podcast }){
         /* a short check statement to ensure that the passed prop contains the correct data
         *
         */
-       if(!podcast || !podcast.length || podcast[0].image) {
+       if(!podcast || !podcast.length || !podcast[0].image) {
         return null;
        }
 
         const settings = {
             dots: true,
             infinite: true,
-            speed: 500,
+            speed: 250,
             slidesToShow: 1,
             slidesToScroll: 1,
             fade: true,
             cssEase: "linear",
+            autoplay: true,
+            autoplaySpeed: 5000,
         };
+
+        /* arrow images function only used to advance the slide by 1 frame left or right depending on 
+        * what the user clicks
+        *
+        */
+       const goToNextSlide = () => {
+        slider.slickNext();
+       }
+       const goToPrevSlide = () => {
+        slider.slickPrev();
+       }
+       let slider;
 
     return (
         <div className="carousel">
-        <Slider {...settings}>
+            <img
+                src={leftArrowImage}
+                alt="Previous"
+                className="arrow left-arrow"
+                onClick={goToPrevSlide}
+            />
+        <Slider ref={(c) => (slider = c)} {...settings}>
             {randomPodcast.map((podcastItem) => (
                 <div key={podcastItem.id}>
-                    <img src={podcastItem.image}
-                    alt={podcastItem.title} />
+                    <img 
+                        src={podcastItem.image}
+                        alt={podcastItem.title} 
+                    />
                     </div>))}
         </Slider>
+        <img
+                src={rightArrowImage}
+                alt="Next"
+                className="arrow right-arrow"
+                onClick={goToNextSlide}
+            />
         </div>
     )
 }

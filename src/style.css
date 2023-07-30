@@ -38,6 +38,7 @@ body {
 .carousel {
     width: 80%;
     overflow: hidden;
+    padding-left: 80px;
 }
 
 .slick-slide img {
@@ -50,6 +51,15 @@ body {
     transition: opacity 0.5s ease-in-out;
 }
 
+.arrow left-arrow{
+    width: 30px;
+    height: 30px;
+}
+
+.arrow right-arrow{
+    width: 30px;
+    height: 30px;
+}
 /* ----- Header Nav/drop down menu ----- */
 .nav {
     background-color: #a5a5a5;
