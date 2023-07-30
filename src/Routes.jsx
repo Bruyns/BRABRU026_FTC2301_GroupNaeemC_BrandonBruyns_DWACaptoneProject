@@ -4,6 +4,7 @@ import Header from "./components/header";
 import Latest from "./components/pages/Latest";
 import Podcast from "./components/pages/podcast";
 import ContactUs from "./components/pages/Contact_us";
+import ShowDetails from "./components/ShowDetails";
 import { useEffect, useState } from "react";
 
 /* function the uses BrowserRoutes to render each component from their respective
@@ -32,10 +33,11 @@ export default function PageRoutes() {
 
     return (    
         <Routes>
-            <Route path="/" element={<Header podcast={podcastData} />}  />
+            <Route path="/" element={window.location.pathname === "/podcast" ? null : <Header podcast={podcastData} />}  />
             <Route path="/Latest" element={<Latest />} />
             <Route path="/podcast" element={<Podcast podcast={podcastData} />} />
             <Route path="/Contact_us" element={<ContactUs />} />
+            <Route path="/podcast/:id" element={<ShowDetails />} />
         </Routes>
     )
 }

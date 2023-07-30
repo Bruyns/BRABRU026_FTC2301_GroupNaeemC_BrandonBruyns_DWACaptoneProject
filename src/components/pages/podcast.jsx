@@ -2,6 +2,8 @@ import React from "react";
 import PodcastSorting from "../PodcastSorting";
 import PodcastCarousel from "../Carousel";
 import Header from "../header";
+// import Preview from "../Preview";
+import { Link } from "react-router-dom";
 
 export default function Podcast({ id }) {
     /* states variables that is used in the webapp
@@ -10,34 +12,28 @@ export default function Podcast({ id }) {
     const [podcast, setPodcast] = React.useState([]);
     const [showDescriptionId, setShowDescriptionId] = React.useState(null);
     const [selectedOption, setSelectedOption] = React.useState(null);
-    const [showsData, setShowsData] = React.useState([])
+
     
     /* Api callback function that fetchs the data from the podcast api as well 
     * as if any data couldnt be fetched returns an error to the console with a message
     *
     */
     React.useEffect(() => {
-        const apiUrl = id
-            ? `https://podcast-api.netlify.app/shows/${id}`
-            : "https://podcast-api.netlify.app/shows" ;
+        const apiUrl = "https://podcast-api.netlify.app/shows";
         fetch(apiUrl)
-            .then((res) => {
-                if (!res.ok){
-                    throw new Error("Network response was not ok");
-                }return res.json();
-            })
-            .then((data) => {
-                if(id) {
-                    setShowsData([data]);
-                }else {
-                    setPodcast(data);
-                }
-            })
-            .catch((error) => {
-                console.error("Error fetching the podcast data:", error);
-            });
-            console.log(podcast)
-        }, [id]);     
+          .then((res) => {
+            if (!res.ok) {
+              throw new Error("Network response was not ok");
+            }
+            return res.json();
+          })
+          .then((data) => {
+            setPodcast(data);
+          })
+          .catch((error) => {
+            console.error("Error fetching the podcast data:", error);
+          });
+      }, []);  
         
         /* function in charge of what happens when the user clicks the "display info" button
         * found in the below html return. it has logic implemented to show info based on 
@@ -114,26 +110,28 @@ export default function Podcast({ id }) {
                     <div className="loading--text">Loading...</div>
                 </div>
             ) :
-            (podcast.map((podcastItem) => (
-                <div key={podcastItem.id} className="podcast--item">
+            (podcast.map((show) => (
+                <div key={show.id} className="podcast--item">
+                    <Link to={`/podcast/${show.id}`}>
                     <img 
                         className="podcast--image" 
-                        src={podcastItem.image} 
-                        alt={podcastItem.title} />
+                        src={show.image} 
+                        alt={show.title} />
                         <div className="play--icon">
                         </div>
+                        </Link>
                     <div className="podcast--info">
-                        <div className="podcast--title">{podcastItem.title}</div>
-                        <p className="podcast--updated">Updated Date: {formatDate(podcastItem.updated)}</p>
-                        <p className="podcast--seasons">Seasons: {`Season ${podcastItem.seasons}`}</p>
+                        <div className="podcast--title">{show.title}</div>
+                        <p className="podcast--updated">Updated Date: {formatDate(show.updated)}</p>
+                        <p className="podcast--seasons">Seasons: {`Season ${show.seasons}`}</p>
                         <button
                             className="display--info-button"
-                            onClick={() => handleInfoClick(podcastItem.id)}>
-                            {showDescriptionId === podcastItem.id ? "Hide Info" : "Display Info"}
+                            onClick={() => handleInfoClick(show.id)}>
+                            {showDescriptionId === show.id ? "Hide Info" : "Display Info"}
                         </button>
                         <div className={`podcast--description ${
-                            showDescriptionId === podcastItem.id ? "show" : ""}`} >
-                            {podcastItem.description}
+                            showDescriptionId === show.id ? "show" : ""}`} >
+                            {show.description}
                         </div>
                     </div>
                 </div>

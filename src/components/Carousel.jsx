@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 export default function PodcastCarousel ({ podcast }){       
-        
+        console.log(podcast)
         const [randomPodcast, setRandomPodcast] = useState([]);
 
         /* function that gets random podcasts to pass into the child component of
