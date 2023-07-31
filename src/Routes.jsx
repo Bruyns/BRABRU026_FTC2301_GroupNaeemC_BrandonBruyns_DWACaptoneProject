@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
-import Header from "./components/header";
+import Header from "./components/Header";
 import Latest from "./components/pages/Latest";
 import Podcast from "./components/pages/podcast";
 import ContactUs from "./components/pages/Contact_us";
