@@ -10,6 +10,7 @@
 * <a href="https://www.flaticon.com/free-icons/ouroboros" title="ouroboros icons">Ouroboros icons created by Freepik - Flaticon</a>
 * <a href="https://www.flaticon.com/free-icons/back" title="back icons">Back icons created by Roundicons - Flaticon</a>
 * <a href="https://www.flaticon.com/free-icons/arrow" title="arrow icons">Arrow icons created by Freepik - Flaticon</a>
+* <a href="https://www.flaticon.com/free-icons/star" title="star icons">Star icons created by Pixel perfect - Flaticon</a>
 * api's used
     - [preview podcasts](https://podcast-api.netlify.app/shows)
     - [displayed podcasts](https://podcast-api.netlify.app/id/<ID>)

@@ -19,7 +19,7 @@ export default function Season({ season }) {
       />
       {showEpisodes && (
         <div className="season--episodes">
-          <h3>{`${season.title}`}</h3>
+          <h3>{season.title}</h3>
           {season.episodes.map((episode, index) => (
             <div key={episode.id} className="season--episode-item">
               {`${index + 1}. ${episode.title}`}
