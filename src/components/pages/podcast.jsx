@@ -1,7 +1,7 @@
 import React from "react";
 import PodcastSorting from "../PodcastSorting";
 import PodcastCarousel from "../Carousel";
-import Header from "../header";
+import Header from "../Header";
 // import Preview from "../Preview";
 import { Link } from "react-router-dom";
 
