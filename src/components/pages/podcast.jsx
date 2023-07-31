@@ -5,7 +5,7 @@ import Header from "../header";
 // import Preview from "../Preview";
 import { Link } from "react-router-dom";
 
-export default function Podcast({ id }) {
+export default function Podcast(id) {
     /* states variables that is used in the webapp
     *
     */

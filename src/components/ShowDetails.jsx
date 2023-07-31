@@ -5,10 +5,10 @@ import Season from "./Season.jsx";
 export default function ShowDetails() {
   const { id } = useParams();
   const [showData, setShowData] = useState(null);
-  console.log(data)
+  console.log(showData)
 
   useEffect(() => {
-    const apiUrl = `https://podcast-api.netlify.app/shows/${id}`;
+    const apiUrl = `https://podcast-api.netlify.app/id/${id}`;
     fetch(apiUrl)
       .then((res) => {
         if (!res.ok) {
@@ -27,16 +27,16 @@ export default function ShowDetails() {
   if (!showData) {
     return  <div className="loading--screen">
                 <img className="loading--image" 
-                    src="./src/img/ouroboros.png" 
+                    src="../src/img/ouroboros.png" 
                     alt="Loading snake"/>
                 <div className="loading--text">Loading...</div>
             </div>;
   }
 
   return (
-    <div>
-      <h2>{showData.title}</h2>
-      {/* Render the details of each season using Season component */}
+    <div className="all--seasons">
+      <h2>{`Title: ${showData.title}`}</h2>
+      <h3>{` Description: ${showData.description}`}</h3>
       {showData.seasons.map((season) => (
         <Season key={season.id} season={season} />
       ))}

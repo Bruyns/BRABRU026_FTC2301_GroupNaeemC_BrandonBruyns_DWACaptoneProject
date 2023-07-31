@@ -32,7 +32,7 @@ export default function PageRoutes() {
     }, []);
 
     return (    
-        <Routes>
+        <Routes >
             <Route path="/" element={window.location.pathname === "/podcast" ? null : <Header podcast={podcastData} />}  />
             <Route path="/Latest" element={<Latest />} />
             <Route path="/podcast" element={<Podcast podcast={podcastData} />} />
