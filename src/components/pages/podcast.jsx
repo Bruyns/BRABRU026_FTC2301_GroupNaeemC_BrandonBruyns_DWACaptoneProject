@@ -12,6 +12,7 @@ export default function Podcast(id) {
     const [podcast, setPodcast] = React.useState([]);
     const [showDescriptionId, setShowDescriptionId] = React.useState(null);
     const [selectedOption, setSelectedOption] = React.useState(null);
+    const [favouritedShows, setFavouritedShows] = React.useState({});
 
     
     /* Api callback function that fetchs the data from the podcast api as well 
@@ -46,6 +47,18 @@ export default function Podcast(id) {
             ));
         }
         
+        /* function that takes a shows ID and checks whether the current state is 
+        * favourites or not by the user using an icon image as the true/false
+        * indicator
+        * 
+        */
+        const handleFavouriteClick = (showId) => {
+            setFavouritedShows((prevFavouritedShows) => ({
+            ...prevFavouritedShows,
+            [showId]: !prevFavouritedShows[showId],
+            }));
+        }
+
         /* function in charge of changing the date found in the podcast array "updated"
         * and changes it into a more user friendly format "DD - MM -- YYYY" 
         *
@@ -117,9 +130,18 @@ export default function Podcast(id) {
                         className="podcast--image" 
                         src={show.image} 
                         alt={show.title} />
-                        <div className="play--icon">
-                        </div>
                         </Link>
+                        <div
+                        className={`favorite-icon ${
+                            favouritedShows[show.id] ? "favorited" : "not-favorited"
+                        }`}
+                        onClick={() => handleFavouriteClick(show.id)}
+                        >
+                        <img
+                            src={favouritedShows[show.id] ? "../src/img/star-fill.png" : "../src/img/star-empty.png"}
+                            alt="Favourite"
+                            />
+                        </div>
                     <div className="podcast--info">
                         <div className="podcast--title">{show.title}</div>
                         <p className="podcast--updated">Updated Date: {formatDate(show.updated)}</p>

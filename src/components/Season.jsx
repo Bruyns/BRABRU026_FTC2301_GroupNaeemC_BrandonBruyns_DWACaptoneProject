@@ -4,6 +4,8 @@ import AudioPlayerOverlay from "./AudioPlayer";
 export default function Season({ season }) {
   const [showEpisodes, setShowEpisodes] = useState(false);
   const [selectedEpisode, setSelectedEpisode] = useState(null);
+  const [favouritedSeasons, setFavouritedSeasons] = useState({});
+
   
   const handleSeasonClick = () => {
     setShowEpisodes(!showEpisodes);
@@ -12,6 +14,13 @@ export default function Season({ season }) {
   const handleEpisodeClick = () => {
     setSelectedEpisode(episode === selectedEpisode ? null : episode);
   };
+
+  const handleFavouriteClick = (seasonId) => {
+    setFavouritedSeasons((prevFavouritedSeasons) => ({
+      ...prevFavouritedSeasons,
+      [seasonId]: !prevFavouritedSeasons[seasonId],
+    }));
+  }
 
   return (
     <div key={season.id} className="season">
@@ -22,6 +31,17 @@ export default function Season({ season }) {
         alt={`Season ${season.number}`}
         onClick={handleSeasonClick}
       />
+      <div
+          className={`favorite-icon ${
+            favouritedSeasons[season.id] ? "favourited" : "not-favourited"
+          }`}
+          onClick={() => handleFavouriteClick(season.id)}
+        >
+        <img
+          src={favouritedSeasons[season.id] ? "../src/img/star-fill.png" : "../src/img/star-empty.png"}
+          alt="Favourite"
+          />
+        </div>
       {showEpisodes && (
         <div className="season--episodes">
           <h3>{season.title}</h3>
