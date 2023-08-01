@@ -293,6 +293,10 @@ body {
     font-size: 14px;
   }
 
+  .season--episode-item:hover {
+    background-color: #e67494;
+  }
+
   /* ---------------------- Footer content ------------------ */
   .footer {
     background-color: #ddd;
@@ -366,6 +370,10 @@ body {
     button {
       font-size: 16px;
       padding: 10px 20px;
+    }
+
+    .season--episode-item {
+      font-size: 22px;
     }
   }
   
