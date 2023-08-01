@@ -2,8 +2,8 @@ import React from "react";
 
 export default function Footer() {
     return (
-        <footer class="footer">
-  <div class="footer--column">
+        <footer className="footer">
+  <div className="footer--column">
     <h3>Column 1</h3>
     <ul>
       <li>Info 1</li>
@@ -11,7 +11,7 @@ export default function Footer() {
       <li>Info 3</li>
     </ul>
   </div>
-  <div class="footer--column">
+  <div className="footer--column">
     <h3>Column 2</h3>
     <ul>
       <li>Info 4</li>
@@ -19,7 +19,7 @@ export default function Footer() {
       <li>Info 6</li>
     </ul>
   </div>
-  <div class="footer--column">
+  <div className="footer--column">
     <h3>Column 3</h3>
     <ul>
       <li>Info 7</li>
