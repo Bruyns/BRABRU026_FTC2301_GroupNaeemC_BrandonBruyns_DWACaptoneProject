@@ -41,10 +41,10 @@ export default function Navbar() {
     }
   }, [])
 
-    /*the links used form react-router-dom allows the main App folder to identify the 
-    * correct path/page to load on the webapp pending on what the user clicks
-    *
-    */
+    /**
+ * Navigation bar component that displays links and handles visibility based on mouse movement.
+ * @returns {JSX.Element} The JSX element representing the Navbar.
+ */
     return (
         <nav className={`navbar ${navbarVisible ? "visible" : "hidden"}`}
         onMouseMove={handleMouseMove}>

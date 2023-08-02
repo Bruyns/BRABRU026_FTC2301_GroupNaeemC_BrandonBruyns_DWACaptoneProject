@@ -6,6 +6,11 @@ import "slick-carousel/slick/slick-theme.css";
 import leftArrowImage from "../img/left-arrow.png"
 import rightArrowImage from "../img/right-arrow.png"
 
+/**
+ * Component that displays a carousel of random podcasts received from the parent component.
+ * @param {Object[]} podcast - An array of podcast data.
+ * @returns {JSX.Element} The JSX element representing the PodcastCarousel.
+ */
 export default function PodcastCarousel ({podcast}){       
     const [randomPodcast, setRandomPodcast] = useState([]);
     const [isLoading, setIsLoading] = useState(true)

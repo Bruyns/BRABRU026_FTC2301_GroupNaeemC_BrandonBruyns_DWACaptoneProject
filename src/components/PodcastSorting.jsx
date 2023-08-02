@@ -1,9 +1,10 @@
 import React from "react";
 
-/* main sorting function that uses the handleSelectChange parameter. it loads all the 
-* objects found in the handleSelectChange function 
-*
-*/
+/**
+ * Component that handles sorting options for the podcast list.
+ * @param {Object} props - Props containing handleSelectChange function to handle sorting change.
+ * @returns {JSX.Element} The JSX element representing the PodcastSorting.
+ */
 export default function PodcastSorting({ handleSelectChange }) {
     const sortingOptions = [
         "--sort--",

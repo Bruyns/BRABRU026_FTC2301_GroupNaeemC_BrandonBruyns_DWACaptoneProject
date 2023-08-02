@@ -5,6 +5,11 @@ import Header from "../Header";
 // import Preview from "../Preview";
 import { Link } from "react-router-dom";
 
+/**
+ * Component to display a list of podcasts and allow sorting and favoriting options.
+ * @param {string} id - The id of the podcast.
+ * @returns {JSX.Element} The JSX element representing the Podcast.
+ */
 export default function Podcast(id) {
     /* states variables that is used in the webapp
     *

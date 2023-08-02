@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import PodcastCarousel from "./Carousel";
 
-/* the main home page that the user sees upon loading the webapp. it is always rendered first
-* along with the navbar or whenever the user clicks the logo/home button
-*
-*/
+/**
+ * The main home page that the user sees upon loading the web app. It displays a header and a PodcastCarousel.
+ * @param {Object} podcast - The array of podcast data.
+ * @returns {JSX.Element} The JSX element representing the Header.
+ */
 export default function Header( { podcast }) {
 
     return (

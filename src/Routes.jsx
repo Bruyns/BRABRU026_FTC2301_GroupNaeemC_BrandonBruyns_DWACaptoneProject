@@ -7,10 +7,10 @@ import ContactUs from "./components/pages/Contact_us";
 import ShowDetails from "./components/ShowDetails";
 import { useEffect, useState } from "react";
 
-/* function the uses BrowserRoutes to render each component from their respective
-* link component and is then exported to the main App.jsx file to be rendered 
-*
-*/
+/**
+ * Component responsible for rendering different routes and their corresponding components using react-router-dom.
+ * @returns {JSX.Element} The JSX element representing the PageRoutes.
+ */
 export default function PageRoutes() {
 
     const [podcastData, setPodcastData] = React.useState([]);

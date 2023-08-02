@@ -1,5 +1,9 @@
 import React from "react";
 
+/**
+ * Footer component that displays columns with information.
+ * @returns {JSX.Element} The JSX element representing the Footer.
+ */
 export default function Footer() {
     return (
         <footer className="footer">

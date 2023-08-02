@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import AudioPlayerOverlay from "./AudioPlayer";
 
+/**
+ * Component to display information about a season and its episodes.
+ * @param {Object} season - The season object containing information about the season.
+ * @returns {JSX.Element} The JSX element representing the Season.
+ */
 export default function Season({ season }) {
   const [showEpisodes, setShowEpisodes] = useState(false);
   const [selectedEpisode, setSelectedEpisode] = useState(null);
@@ -21,6 +26,7 @@ export default function Season({ season }) {
       [seasonId]: !prevFavouritedSeasons[seasonId],
     }));
   }
+
 
   return (
     <div key={season.id} className="season">

@@ -2,6 +2,10 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Season from "./Season.jsx";
 
+/**
+ * Component to display details of a specific podcast show using the id from react-router-dom.
+ * @returns {JSX.Element} The JSX element representing the ShowDetails.
+ */
 export default function ShowDetails() {
   const { id } = useParams();
   const [showData, setShowData] = useState(null);
