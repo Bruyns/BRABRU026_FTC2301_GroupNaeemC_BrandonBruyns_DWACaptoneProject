@@ -16,7 +16,7 @@ export default function Season({ season }) {
     setShowEpisodes(!showEpisodes);
   };
 
-  const handleEpisodeClick = () => {
+  const handleEpisodeClick = (episode) => {
     setSelectedEpisode(episode === selectedEpisode ? null : episode);
   };
 

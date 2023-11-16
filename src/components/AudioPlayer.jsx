@@ -22,8 +22,8 @@ export default function AudioPlayerOverlay({ audioUrl }) {
         <div className="audio--player-overlay">
             <audio ref={audioRef} src={audioUrl}></audio>
             <div className="audio--control">
-                <button onClick={togglePlay}>{isPlaying ? "Stop" : "Play" }</button>
-                <button onCLick={() => audioRef.current.pause()}>Stop</button>
+                <button onClick={togglePlay}>{isPlaying ? "Pause" : "Play" }</button>
+                {/* <button onCLick={() => audioRef.current.pause()}>Stop</button> */}
             </div>
         </div>
     )

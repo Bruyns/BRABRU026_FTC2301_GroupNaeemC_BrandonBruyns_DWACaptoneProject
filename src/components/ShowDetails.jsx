@@ -32,7 +32,8 @@ export default function ShowDetails() {
     return  <div className="loading--screen">
                 <img className="loading--image" 
                     src="../src/img/ouroboros.png" 
-                    alt="Loading snake"/>
+                    alt="Loading snake"
+                    key={id}/>
                 <div className="loading--text">Loading...</div>
             </div>;
   }
