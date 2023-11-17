@@ -45,16 +45,19 @@ export default function PodcastCarousel ({podcast}){
        
 
         const settings = {
-            dots: true,
-            infinite: true,
-            speed: 250,
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            fade: true,
-            cssEase: "linear",
-            autoplay: true,
-            autoplaySpeed: 5000,
-        };
+          dots: true,
+          infinite: true,
+          speed: 250,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          fade: true,
+          cssEase: "linear",
+          autoplay: true,
+          autoplaySpeed: 5000,
+          centerMode: true,
+          variableMode: true,
+      }
+
 
     if (isLoading) {
         return (

@@ -40,7 +40,8 @@ body {
 }
 
 .carousel {
-    width: 80%;
+    width: 370px;
+    height: 330px;
     overflow: hidden;
     padding-left: 80px;
 }
