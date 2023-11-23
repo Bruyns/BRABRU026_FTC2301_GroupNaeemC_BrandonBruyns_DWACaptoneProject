@@ -6,6 +6,7 @@ import Podcast from "./components/pages/podcast";
 import ContactUs from "./components/pages/Contact_us";
 import ShowDetails from "./components/ShowDetails";
 import { useEffect, useState } from "react";
+import SignIn from "./components/pages/Signup";
 
 /**
  * Component responsible for rendering different routes and their corresponding components using react-router-dom.
@@ -38,6 +39,7 @@ export default function PageRoutes() {
             <Route path="/podcast" element={<Podcast podcast={podcastData} />} />
             <Route path="/Contact_us" element={<ContactUs />} />
             <Route path="/podcast/:id" element={<ShowDetails />} />
+            <Route path="/Signup" element={<SignIn/>} />
         </Routes>
     )
 }
