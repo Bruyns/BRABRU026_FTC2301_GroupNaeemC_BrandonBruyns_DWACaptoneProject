@@ -56,7 +56,7 @@ export default function SignIn() {
             <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5">
-            Sign in
+            Login
           </Typography>
           <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
             <TextField
@@ -98,8 +98,8 @@ export default function SignIn() {
                 </Link>
               </Grid>
               <Grid item>
-              <RouterLink to="/Login" variant="body2">
-                  {"Don't have an account? Sign Up"}
+              <RouterLink to="/Signup" variant="body2">
+                  {"Already have an account? Log In"}
                 </RouterLink>
               </Grid>
             </Grid>

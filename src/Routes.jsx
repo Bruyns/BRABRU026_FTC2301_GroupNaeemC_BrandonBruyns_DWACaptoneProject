@@ -7,6 +7,7 @@ import ContactUs from "./components/pages/Contact_us";
 import ShowDetails from "./components/ShowDetails";
 import { useEffect, useState } from "react";
 import SignIn from "./components/pages/Signup";
+import LogIn from "./components/pages/Login"
 
 /**
  * Component responsible for rendering different routes and their corresponding components using react-router-dom.
@@ -40,6 +41,7 @@ export default function PageRoutes() {
             <Route path="/Contact_us" element={<ContactUs />} />
             <Route path="/podcast/:id" element={<ShowDetails />} />
             <Route path="/Signup" element={<SignIn/>} />
+            <Route path="/Login" element={<LogIn/>} />
         </Routes>
     )
 }
