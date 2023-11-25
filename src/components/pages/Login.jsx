@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import * as React from 'react';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
@@ -37,6 +38,7 @@ export default function SignIn() {
     console.log({
       email: data.get('email'),
       password: data.get('password'),
+      name: data.get('name'),
     });
   };
 
@@ -59,6 +61,16 @@ export default function SignIn() {
             Login
           </Typography>
           <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
+          <TextField
+              margin="normal"
+              required
+              fullWidth
+              id="Name"
+              label="Full Name"
+              name="name"
+              autoComplete="name"
+              autoFocus
+            />
             <TextField
               margin="normal"
               required

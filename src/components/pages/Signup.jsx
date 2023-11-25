@@ -37,6 +37,7 @@ export default function SignIn() {
     console.log({
       email: data.get('email'),
       password: data.get('password'),
+      name: data.get('name'),
     });
   };
 
@@ -59,6 +60,16 @@ export default function SignIn() {
             Sign in
           </Typography>
           <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
+          <TextField
+              margin="normal"
+              required
+              fullWidth
+              id="Name"
+              label="Full Name"
+              name="name"
+              autoComplete="name"
+              autoFocus
+            />
             <TextField
               margin="normal"
               required
