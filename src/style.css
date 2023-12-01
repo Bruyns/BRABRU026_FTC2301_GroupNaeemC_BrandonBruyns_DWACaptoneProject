@@ -285,7 +285,7 @@ body {
   
   .season--info.show-episodes .season--episodes {
     opacity: 1;
-    max-height: 500px; /* Adjust this value as needed */
+    max-height: 100%; /* Adjust this value as needed */
   }
   
   .season--episode-item {
