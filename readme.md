@@ -16,6 +16,16 @@
 * api's used
     - [preview podcasts](https://podcast-api.netlify.app/shows)
     - [displayed podcasts](https://podcast-api.netlify.app/id/<ID>)
+* <a href="https://devicon.dev" title="markdown icons">Markdown icons used - devicon</a>
+
+## Languages and libraries used 
+ - <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original-wordmark.svg" width="30px" height="30px" /> - HTML
+ - <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="30px" height="30px"/> - CSS
+ - <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="30px" height="30px"/> - Javascript (ESS6)
+ - <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" width="30px" height="30px"/> - React.js
+ - <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original-wordmark.svg" width="30px" height="30px"/>) - Node.js
+ - <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/eslint/eslint-original.svg" width="30px" height="30px" /> - ESLint
+ - <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/markdown/markdown-original.svg" width="30px" height="30px"/> - Markdown
 
 ## progress (Work-in-progress)
 * user stories:
