@@ -12,7 +12,7 @@ export default function Header( { podcast }) {
         <main className="header">
             <div className="header--Text">
                 <h2>Daily Podcasts to enjoy</h2>
-                <h1>Header content goes here!</h1>
+                <h1>Welcome to Podcasting-couch :)</h1>
                 <h3>listen to thousands of cool and interesting podcasts form over 100's of awesome artists</h3>
                 <div className="header--carousel">
                     <PodcastCarousel podcast={podcast} />
